@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock-paper-scissors</title>
+
+    <link rel="stylesheet" href="public/style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="flex w-full sm:bg-slate-600 h-screen text-white">
+      <!-- div card -->
+      <div
+        class="flex flex-col mx-auto w-full sm:w-3/4 lg:w-2/3 bg-slate-950 sm:my-5 sm:rounded-lg"
+      >
+        <!-- Heading of the game -->
+        <h1
+          class="flex mt-5 text-xl xxs:text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-bold sm:font-semibold lg:font-medium tracking-wider mx-auto"
+        >
+          Rock Paper Scissors
+        </h1>
+
+        <!-- buttons part -->
+        <div
+          class="flex mx-auto mt-8 justify-center items-center gap-5 lg:gap-8"
+        >
+          <button
+            class="flex justify-center items-center w-16 xs:w-20 sm:w-24 md:w-28 lg:w-32 h-16 xs:h-20 sm:h-24 md:h-28 lg:h-32 rounded-full border-[2px] sm:border-[3px] border-white"
+            onclick="playGame('rock')"
+          >
+            <img
+              src="public/images/rock-emoji.png"
+              alt="rock"
+              class="w-10 sm:w-12 md:w-14 lg:w-16"
+            />
+          </button>
+          <button
+            class="flex justify-center items-center w-16 xs:w-20 sm:w-24 md:w-28 lg:w-32 h-16 xs:h-20 sm:h-24 md:h-28 lg:h-32 rounded-full border-[2px] sm:border-[3px] border-white"
+            onclick="playGame('paper')"
+          >
+            <img
+              src="public/images/paper-emoji.png"
+              alt="paper"
+              class="w-10 sm:w-12 md:w-14 lg:w-16"
+            />
+          </button>
+          <button
+            class="flex justify-center items-center w-16 xs:w-20 sm:w-24 md:w-28 lg:w-32 h-16 xs:h-20 sm:h-24 md:h-28 lg:h-32 rounded-full border-[2px] sm:border-[3px] border-white"
+            onclick="playGame('scissors')"
+          >
+            <img
+              src="public/images/scissors-emoji.png"
+              alt="scissors"
+              class="w-10 sm:w-12 md:w-14 lg:w-16"
+            />
+          </button>
+        </div>
+
+        <!--result & score display part -->
+        <div class="flex flex-col justify-center mx-auto mt-5">
+          <p class="js_result mt-6 text-2xl sm:text-3xl tracking-wider"></p>
+          <p class="js_moves flex justify-center items-center mt-4 gap-3"></p>
+          <p
+            class="js_score flex text-lg sm:text-xl mt-8 gap-5 justify-center"
+          ></p>
+        </div>
+
+        <!-- reset score & autoplay button -->
+        <div class="flex gap-5 justify-center">
+          <button
+            class="mt-5 bg-white text-slate-950 text-center px-5 py-3 rounded-md tracking-wide sm:font-semibold sm:text-xl"
+            onclick="resetScore()"
+          >
+            Reset Score
+          </button>
+          <button
+            class="mt-5 bg-white text-slate-950 text-center px-5 py-3 rounded-md tracking-wide sm:font-semibold sm:text-xl"
+            onclick="autoPlay()"
+          >
+            Autoplay
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
